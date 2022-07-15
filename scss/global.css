@@ -1,0 +1,147 @@
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  background-image: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-card {
+  position: relative;
+  display: flex;
+  width: 65em;
+  height: 36em;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42.5%;
+  height: 100%;
+}
+.left-side img {
+  width: 100%;
+}
+.left-side .wireframe-bg-image {
+  position: absolute;
+  left: -37%;
+  top: -24%;
+  width: 80%;
+  z-index: 1;
+}
+.left-side .woman-image {
+  width: 120%;
+  margin-left: -20%;
+  z-index: 2;
+  -webkit-clip-path: polygon(16.5% 0, 100% 0, 100% 100%, 16.5% 100%);
+          clip-path: polygon(16.5% 0, 100% 0, 100% 100%, 16.5% 100%);
+}
+.left-side .box-image {
+  position: absolute;
+  left: -10.5%;
+  top: 41%;
+  width: 22%;
+  z-index: 3;
+}
+
+.right-side-container {
+  width: 57%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-container {
+  width: 70%;
+  font-weight: 400;
+}
+.faq-container .title {
+  margin-top: 0;
+  margin-bottom: 9%;
+}
+
+.question {
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border-bottom: 1px rgb(211, 211, 211) solid;
+}
+.question .answer {
+  display: none;
+  font-size: 0.8em;
+  margin-top: 4%;
+  color: rgb(150, 150, 150);
+  line-height: 1.5em;
+}
+.question img {
+  float: right;
+  display: inline-block;
+}
+
+#hashLink:target {
+  font-weight: 700;
+}
+
+#hashLink:target .answer {
+  display: block;
+  font-weight: 400;
+}
+
+#hashLink:target img {
+  transform: rotateX(180deg);
+}
+
+@media (max-width: 400px) {
+  .white-card {
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .left-side {
+    margin: auto;
+    height: auto;
+  }
+  .left-side .box-image {
+    position: absolute;
+    left: 20%;
+    top: -7%;
+    width: 22%;
+    z-index: 3;
+  }
+  .left-side .woman-image {
+    width: 120%;
+    margin-top: -55%;
+    margin-left: -20%;
+    z-index: 2;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .right-side-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=global.css.map */

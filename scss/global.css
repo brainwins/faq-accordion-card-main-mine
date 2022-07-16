@@ -1,6 +1,13 @@
+:root {
+  --soft-red: hsl(14, 88%, 65%);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 html {
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 12px;
 }
 
 body {
@@ -30,8 +37,8 @@ a:visited {
 .white-card {
   position: relative;
   display: flex;
-  width: 65em;
-  height: 36em;
+  padding: 4.3rem 0;
+  width: 57.5rem;
   background-color: white;
   border-radius: 20px;
 }
@@ -85,33 +92,44 @@ a:visited {
 }
 
 .question {
+  display: block;
+  font-size: 0.85rem;
+  cursor: pointer;
   margin-top: 5%;
   padding-bottom: 5%;
-  border-bottom: 1px rgb(211, 211, 211) solid;
+  transition: ease 0.15s;
 }
-.question .answer {
-  display: none;
-  font-size: 0.8em;
+
+.question:hover {
+  color: var(--soft-red);
+}
+
+.answer {
+  font-size: 1rem;
   margin-top: 4%;
   color: rgb(150, 150, 150);
   line-height: 1.5em;
 }
-.question img {
+
+.question-wrapper {
+  border-bottom: 1px rgb(211, 211, 211) solid;
+}
+
+input + label + .answer {
+  display: none;
+}
+
+img {
   float: right;
   display: inline-block;
 }
 
-#hashLink:target {
-  font-weight: 700;
+input {
+  display: none;
 }
 
-#hashLink:target .answer {
+input:checked + .question + .answer {
   display: block;
-  font-weight: 400;
-}
-
-#hashLink:target img {
-  transform: rotateX(180deg);
 }
 
 @media (max-width: 400px) {
@@ -144,4 +162,33 @@ a:visited {
     justify-content: center;
     align-items: center;
   }
+}
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: blue;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #0000cc;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: blue;
+  background: white;
+  transition: all 0.35s;
+}
+
+input:checked ~ .tab-content {
+  max-height: 50vh;
+  padding: 0.5em;
 }/*# sourceMappingURL=global.css.map */

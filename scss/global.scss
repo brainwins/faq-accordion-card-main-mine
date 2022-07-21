@@ -1,11 +1,17 @@
 :root{
   --soft-red: hsl(14, 88%, 65%);
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
 }
 *, *::before, *::after{
   box-sizing: inherit;
 }
 html{
   font-family: 'Kumbh Sans', sans-serif;
+}
+h1{
+  margin: 0;
 }
 body{
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -32,7 +38,7 @@ a{
 .white-card{
   position: relative;
   display: flex;
-  padding: 4.3rem 0;
+  padding: 3rem 0 4rem;
   width: 57.5rem;
   background-color: white;
   border-radius: 20px;
@@ -76,26 +82,29 @@ a{
 .faq-container{
   width: 70%;
   font-weight: 400;
-
   .title{
     margin-top: 0;
-    margin-bottom: 9%;
   }
 }
+.questions-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 2.5rem;
+}
 .question{
-
+  color: var(--dark-grayish-blue);
   display: block;
   font-size: 0.85rem;    
   cursor: pointer;
   margin-top: 5%;
-  padding-bottom: 5%;
   transition: ease .15s;
 }
 .question:hover{
   color: var(--soft-red);
 }
 .answer{
-  font-size: 1rem;
+  font-size: 0.80rem;
   margin-top: 4%;
   color: rgb(150,150,150);
   line-height: 1.5em;
@@ -116,6 +125,9 @@ input{
 }
 input:checked + .question + .answer {
   display: block;
+}
+input:checked + .question{
+  color: black;
 }
 @media (max-width: 400px) {
   .white-card{

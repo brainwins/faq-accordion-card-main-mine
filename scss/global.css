@@ -76,8 +76,8 @@ a:visited {
 }
 .left-side .box-image {
   position: absolute;
-  left: -10.5%;
-  top: 41%;
+  left: -14%;
+  top: 39%;
   width: 22%;
   z-index: 3;
 }
@@ -86,7 +86,7 @@ a:visited {
   width: 57%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 
 .faq-container {
@@ -177,7 +177,7 @@ input:checked + .question {
   .right-side-container {
     display: block;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
   }
 }
 .tab {

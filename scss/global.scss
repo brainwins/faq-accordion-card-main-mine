@@ -27,6 +27,9 @@ a{
     font-weight: bold;
   }
 }
+p{
+  margin: 0;
+}
 .main-container{
   width:100%;
   height: 100%;
@@ -38,7 +41,7 @@ a{
 .white-card{
   position: relative;
   display: flex;
-  padding: 3rem 0 4rem;
+  padding: 4rem 0 4rem;
   width: 57.5rem;
   background-color: white;
   border-radius: 20px;
@@ -90,7 +93,7 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 .question{
   color: var(--dark-grayish-blue);
@@ -98,6 +101,7 @@ a{
   font-size: 0.85rem;    
   cursor: pointer;
   margin-top: 5%;
+  margin-bottom: 1.4rem;
   transition: ease .15s;
 }
 .question:hover{
@@ -105,21 +109,18 @@ a{
 }
 .answer{
   font-size: 0.80rem;
-  margin-top: 4%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: rgb(150,150,150);
   line-height: 1.5em;
 }
 .question-wrapper{
   border-bottom: 1px rgb(211,211,211) solid;
+  padding-bottom: 0rem;
 }
 input + label + .answer {
   display: none;
 }
-  img{
-    float:right;
-    display: inline-block;
-  }
-
 input{
   display: none;
 }
@@ -128,6 +129,7 @@ input:checked + .question + .answer {
 }
 input:checked + .question{
   color: black;
+  font-weight: 700;
 }
 @media (max-width: 400px) {
   .white-card{
